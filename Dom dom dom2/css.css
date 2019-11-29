@@ -1,0 +1,9 @@
+div#msg{
+    background: rgb(45, 35, 184);
+    color: white;
+    font: normal 10pt arial;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom dom dom dom </title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <h1>Aprendendo como se faz o dom dom dom dom dom</h1>
+    <p>Agr ta indo</p>
+    <p>O <strong>DOM</strong> é um cara legal? hum</p>
+
+    <h2>Aprendendo a dar funções!</h2>
+
+    <input type="number" name="num1" id="num1">+
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+
+    <div id="msg">Clique em mim desgraçadinho :3</div><!--OBS: da pra declarar as coisas no html ou no js-->
+                                                      <!--seria do lado do "msg" onclick="<nome da função>()"-->
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] //Pode ser uma outra posição, como 1)
+        document.writeln(window.document.URL)
+        document.write('<br>')
+        p1.style.color= 'purple'
+        document.writeln('ta indo?: ' + p1.innerHTML) //copia a frase que digitou na posição 0 do p (começa do 0)
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+
+        d = document.querySelector('div#msg')
+
+        var a = window.document.getElementById('msg') //importante
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)    //O event listener faz com que não fique uns códigos a mais no meu html
+
+        function clicar(){
+            // a = window.document.getElementById('msg')
+            a.innerText='clica não!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            //var b = document.getElementById('msg') 
+            a.innerText='Clicar?'                  //'Importante': n precisa criar uma varíavel pra todas,
+            a.style.background='purple'            //pode colocar em cima de todas as functions dentro da tag de js
+        }                                          //mas não é o mais recomendável, mas bem melhor, pq o meu deu td errado
+        function sair(){                           //e tive que deixar td como comentário... deixa em cima msm
+            //var c = document.getElementById('msg')
+            a.innerText='VOCÊ NÃO VAI CLICAR ?!?!?'
+            a.style.background = 'pink'
+        }
+        function somar(){
+            var n1 = document.getElementById('num1')    //chama a função criada no input
+            var n2 = document.querySelector('input#num2') 
+            var res = document.getElementById('res')
+            var numero1 = Number(num1.value)
+            var numero2 = Number(num2.value) //serve pra selecionar o número e transformar pra int, pq ele estava string
+            var s = numero1 + numero2
+            res.innerHTML = `A soma entre ${numero1} e ${numero2} é: <strong>${s}<strong>`
+            
+        }
+        //O window.document serve pra ver várias coisas da janela(window), como url, p e muitas outras coisas
+        //pode fazer alterações de style no javascript
+
+        //O id é só pra pegar um, o query selector tem a forma de colocar querySelectorAll (pra mais de um)
+        //Ao invés de id pode colocar name, tagName, class e selector (nova e mais recomendável)
+        //div é representada por = # e class por = . (antes da palavra, como no div#msg e na div do html)
+
+        //Árvore DOM é a forma que seu site é estruturado, começando do window, dps html e por aí vai
+    </script>    
+</body>
+</html>

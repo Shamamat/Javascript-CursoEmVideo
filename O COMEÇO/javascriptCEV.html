@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alguma coisa</title>
+</head>
+<body>
+    <h1> Isso é alguma coisa</h1>
+    <p>veigar é um personagem mt dahora</p>
+    <script>
+        var n1 = parseInt(prompt('Digite um número legal... tlgd?: '))
+        var n2 = parseInt(prompt('O segundo ae: '))
+        var s = n1 + n2
+        var p = "Marcelinho Brasil"
+        var n = 1545.5
+
+        alert(`O valores dos valores ultramente valorados é:  ${s} Mas ${p.toLowerCase()} é minúsculo` ) //O ${} é mt bom
+        alert(`mas só por dizer ${n1} mais ${n2} com o valor ${s} é top, mas o nome ${p} tem ${p.length} caracteres`)
+        document.writeln(`o nome de ${p} em maiúscula fica ${p.toUpperCase()} incrível!`) //feito pra mostrar funções do alert
+        document.writeln(`e se eu quiser colocar o valor ${n} com um zero a mais fica ${n.toFixed(2)} se quiser vírgula, fica ${n.toFixed(2).replace ('.',',')}`)
+        document.writeln(`Em real: ${n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`) 
+        /*toLocaleString é pra localizar a parte do mundo (no caso pt_BR)*/
+        
+        //aritméticos são: +, -, *, /, etc
+        //relacionais são: >, <, >=, <=, ==, =!
+        //lógicos são: !, &&, ||
+        //ternários são: ? e :, usado para três operações
+
+        //binários são dois números: 0 e 1
+        //A % pega o "resto" de uma "divisão" ex: 5/2 tem o resto 1
+        //O ** é número ao quadrado ex 3**2 = 9
+
+        //'Ordem de precedência': o computador vai na ordem de primeiro identificar os (), depois o **, depois *, /, %, depois +, - e por fim relacionais (>, >=)
+        //Quando se tem operações de mesmo nível de ordem de precedência ele pega o primeiro que aparecer, por exemplo: 3 * 3 / 2 = 4.5
+        //O uso de () em operações matemáticas faz com que possa fazer (5+3) / 2 sem ele começar pela divisão
+
+        //'Auto-atribuições': fazer uma atribuição(valor) novo na variável, ex: n = 4, n = n % 4(em baixo), n = 5 * 0 + n
+        //pode simplificar com n += 4 (n = n + 4) e outros valores
+        //dá pra simplificar ainda mais usando n++ (adiciona 1 valor na prox linha) ou --n (decrementa 1 valor nessa linha)
+        
+        //O valor == é para estabelecer "igualdade" (ex: 3 é "igual" á 4?: não, n confundir com =, de atribuição (n = 3))
+        //Quando se tem 3 === é pra ver se é do mesmo tipo e do mesmo valor (ex: 3 === '3' vai dar false pq as '' dão valor de string)
+
+        //O valor && é o "e" que significa que tem que ter dois valores (ex: n1 > n2 && n3 < n2 = true)
+        //O valor || é o "ou" que pode ser ou um valor verdadeiro e um falso ou os dois valores verdadeiros
+        //terciários são tipo if else, por ex: média >= 7?'aprovado':'reprovado' (no caso se o valor for menor que 7 reprovado e maor aprovado)
+    </script>
+</body>
+</html>
